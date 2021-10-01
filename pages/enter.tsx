@@ -6,6 +6,7 @@ import { useRouter } from 'next/dist/client/router';
 import {useState} from "react"
 import styles from '../styles/enter.module.css'
 import {createHmac} from 'crypto'
+import Siteinfo from '../components/siteinfo'
 
 export const getStaticProps:GetStaticProps = async (ctx) => {
 
@@ -160,6 +161,8 @@ export default function Enter(props: object) {
 
 
     return (
+        <>
+        <Siteinfo />
         <div id={styles.container}>
             {theError && <h1>{theError}</h1>}
             <div>
@@ -191,5 +194,6 @@ export default function Enter(props: object) {
                 }
             </div>
         </div>
+        </>
     );
 }

@@ -5,6 +5,7 @@ import { useRouter } from 'next/dist/client/router'
 import React, {useEffect, useState} from 'react'
 import Navbar from '../components/navbar';
 import Card from '../components/card';
+import Siteinfo from '../components/siteinfo'
 
 export const getStaticProps:GetStaticProps = async (ctx) => {
 
@@ -119,6 +120,7 @@ export default function Dashboard(props: object) {
 
     return (
         <div>
+            <Siteinfo />
             <Navbar pic={theUser ? theUser.pic : "/profile_placeholder.svg"} />
             {snippets && snippets.map((snippet, index: number) => <Card key={index} index={index} id={snippet.id} title={snippet.data.title} code={snippet.data.code} language={snippet.data.language} delete={remove} />)}
         </div>

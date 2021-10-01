@@ -7,6 +7,7 @@ import Navbar from '../components/navbar';
 import styles from '../styles/edit.module.css'
 import Editor from "@monaco-editor/react";
 import dynamic from 'next/dynamic';
+import Siteinfo from '../components/siteinfo'
 
 export const getStaticProps:GetStaticProps = async (ctx) => {
 
@@ -105,6 +106,8 @@ export default function Snippet(props: object) {
     }, [id, auth, router])
 
     return (
+        <>
+        <Siteinfo />
         <div id={styles.container}>
             <Navbar pic={pic ? pic : "/profile_placeholder.svg"} />
             <input type="text" value={snippet.title} id={styles.title} placeholder="title" />
@@ -137,5 +140,6 @@ export default function Snippet(props: object) {
                 />
             }
         </div>
+        </>
     )
 }

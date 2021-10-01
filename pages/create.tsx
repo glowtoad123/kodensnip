@@ -8,6 +8,7 @@ import styles from '../styles/edit.module.css'
 import Editor from "@monaco-editor/react";
 import Languages from '../components/languages';
 import dynamic from 'next/dynamic';
+import Siteinfo from '../components/siteinfo'
 
 export const getStaticProps:GetStaticProps = async (ctx) => {
 
@@ -120,6 +121,7 @@ export default function Create(props: object) {
 
     return (
         <div id={styles.container}>
+            <Siteinfo />
             <Navbar pic={pic ? pic : "/profile_placeholder.svg"} />
             <input type="text" value={snippet.title} onChange={settingTitle} id={styles.title} placeholder="title" />
             {monacoLanguages.includes(snippet.language) ? 

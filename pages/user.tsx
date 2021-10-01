@@ -7,6 +7,7 @@ import React, {useEffect, useState} from 'react'
 import Navbar from '../components/navbar';
 import styles from '../styles/enter.module.css'
 import {createHmac} from 'crypto'
+import Siteinfo from '../components/siteinfo'
 
 export const getStaticProps:GetStaticProps = async (ctx) => {
 
@@ -124,6 +125,7 @@ export default function Dashboard(props: object) {
 
     return (
         <>
+        <Siteinfo />
         <Navbar pic={theUser ? theUser.pic : "/profile_placeholder.svg"} />
         {status && <h1>{status}</h1>}
         <div id={styles.container}>
