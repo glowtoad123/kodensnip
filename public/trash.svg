@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="edit"
+   width="32"
+   height="32"
+   version="1.1"
+   viewBox="0 0 8.4667 8.4667"
+   id="svg4"
+   sodipodi:docname="trash.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter1183"
+       x="-1.6289789"
+       y="-1.0280105"
+       width="4.5596206"
+       height="3.2463933">
+      <feFlood
+         flood-opacity="0.501961"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood1173" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="out"
+         result="composite1"
+         id="feComposite1175" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0.9"
+         result="blur"
+         id="feGaussianBlur1177" />
+      <feOffset
+         dx="0.4"
+         dy="0.4"
+         result="offset"
+         id="feOffset1179" />
+      <feComposite
+         in="offset"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite2"
+         id="feComposite1181" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter928"
+       x="-0.017581914"
+       y="-0.0090012516"
+       width="1.064467"
+       height="1.0330046">
+      <feFlood
+         flood-opacity="0.25098"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood918" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite920" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0.1"
+         result="blur"
+         id="feGaussianBlur922" />
+      <feOffset
+         dx="0.4"
+         dy="0.4"
+         result="offset"
+         id="feOffset924" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite926" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="12.109204"
+     inkscape:cx="14.12149"
+     inkscape:cy="16.722817"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     id="path2"
+     d="m 16.402344,2.4570312 c -5.730105,0.072324 -6.4174016,4.0425138 -6.5000002,4.875 H 23.529297 c -0.0871,-0.8385361 -0.808139,-4.8214008 -6.8125,-4.875 -0.106598,-9.52e-4 -0.211165,-0.0013 -0.314453,0 z M 9.890625,10.257812 V 29.119141 H 23.541016 V 10.257812 Z"
+     transform="scale(0.26458437)"
+     style="fill:#631222;fill-opacity:1;filter:url(#filter928)"
+     sodipodi:nodetypes="cccscccccc" />
+  <path
+     d="m 4.872924,4.1851759 c 0.035424,-0.00201 0.072287,0.00841 0.1054202,0.032556 0.081559,0.05945 0.1083177,0.1785891 0.059945,0.267168 L 4.6300438,5.2326608 5.0589599,5.9690529 c 0.050799,0.08721 0.027176,0.2070399 -0.05271,0.2687185 -0.079887,0.061679 -0.185363,0.040701 -0.2361622,-0.046509 L 4.4274714,5.6031824 4.1013918,6.2005642 C 4.0530188,6.2891432 3.9483387,6.3127244 3.8667798,6.2532742 3.7852208,6.1938242 3.7584623,6.0746853 3.8068348,5.9861061 L 4.2150805,5.2383455 3.7866811,4.5024702 C 3.7358821,4.4152602 3.7589871,4.29543 3.8388751,4.233752 3.9187621,4.172073 4.0242381,4.192534 4.0750373,4.279744 L 4.4176534,4.8678241 4.743733,4.2704421 C 4.772454,4.2178481 4.82115,4.1881291 4.872924,4.1851759 Z"
+     style="fill:#354f52;fill-opacity:1;stroke-width:0.264584;filter:url(#filter1183)"
+     id="path983" />
+</svg>

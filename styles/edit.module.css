@@ -1,0 +1,55 @@
+#container {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: rgba(21, 20, 23, 0.6);
+    backdrop-filter: blur(8px);
+    margin: auto;
+}
+
+#title {
+    padding: 20px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border: inherit;
+    border-radius: inherit;
+    background-color: inherit;
+    backdrop-filter: inherit;
+    color: rgb(99, 18, 34);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 800;
+    text-align: center;
+}
+
+#container>div {
+    height: 81.25vh;
+}
+
+#container>div>div {
+    height: 100% !important;
+}
+
+#container>select, #container>select>*, #container>button {
+    background: transparent;
+    padding: 10px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(99, 18, 34, 0.4);
+    font-weight: 800;
+}
+
+#container>select, .intellisense {
+    box-shadow: none;
+    color: rgba(99, 18, 34, 1) !important;
+}
+
+#container>button {
+    background:rgb(99, 18, 34);
+    color: rgba(21, 20, 23, 1);
+}
+
+.monacoSupport {
+    color: rgba(99, 18, 34, 0.6) !important;
+}

@@ -1,0 +1,105 @@
+#container {
+    display: flex;
+    margin: 25vh auto;
+    flex-direction: column;
+    background: none;
+}
+
+#container>h1 {
+    color: rgba(99, 18, 34, 1);
+    background-color: rgba(3, 4, 4, 0.6);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    border-radius: 0 0 10px 0;
+    z-index: 2;
+    
+}
+
+#container>div {
+    background-color: rgba(3, 4, 4, 0.6);
+    backdrop-filter: blur(8px);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px auto;
+}
+
+#container>div>input {
+    background-color: rgba(38, 50, 56, 0.6);
+    backdrop-filter: inherit;
+    border: inherit;
+    border-radius: inherit;
+    padding: inherit;
+    width: 50%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.6);
+    margin: 10px auto;
+    display: flex;
+}
+
+#container>div>img {
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 360px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    vertical-align: middle;
+    margin: auto;
+}
+
+#container>div>button {
+    background-color: rgba(99, 18, 34, 0.6);
+    backdrop-filter: inherit;
+    border: inherit;
+    border-radius: inherit;
+    padding: inherit;
+    margin: 10px auto;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 500ms;
+}
+#container>div>button:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#container>div>button:active {
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#container>div>p {
+    color:rgba(99, 18, 34, 1);
+    text-align: center;
+}
+
+#container>div>select, #container>div>select>* {
+    background: transparent;
+    padding: 10px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(99, 18, 34, 1);
+    font-weight: 800;
+}
+
+@supports not ((backdrop-filter: none) or (-webkit-backdrop-filter: none)) {
+    #container>div {
+        box-shadow: 20px 20px 60px #030404, -20px -20px 60px #3F545E;
+        border-radius: 30px;
+        margin: 30px auto;
+        transition: box-shadow 500ms;
+    }
+
+    #container>div:hover {
+        box-shadow: none;
+    }
+}
