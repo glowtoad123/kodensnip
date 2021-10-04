@@ -72,6 +72,28 @@ a {
   z-index: 3 !important;
 }
 
+.carousel-indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 30px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #631222;
+  background-clip: padding-box;
+  border-top: none;
+  border-bottom: none;
+  opacity: .5;
+  border-radius: 360px;
+  transition: opacity .6s ease;
+} 
+
+.carousel-indicators .active {
+  background-color: #300810;
+}
+
 @supports not ((backdrop-filter: none) or (-webkit-backdrop-filter: none)) {
   body {
     background: #263238;

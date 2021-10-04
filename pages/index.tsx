@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Siteinfo from '../components/siteinfo'
 import styles from '../styles/Home.module.css'
+import Carousel from 'react-bootstrap/Carousel'
 import Link from 'next/link'
 
 const Home: NextPage = () => {
@@ -12,11 +13,20 @@ const Home: NextPage = () => {
         <h1 className={styles.titleText}>Kodensnip</h1>
     </div>
     <div className={styles.featureContainerContainer}>
-        <div className={styles.featureContainer}>
-            <img className={styles.featurePic} src="/creation.jpeg" alt="kodensnip creation page" />
-            <p className={styles.description}>create snippet for your coding projects so that use will no longer have to use templates. Just copy and paste your code whenever they need it.</p>
-        </div>
-        <Link href="/enter" passHref><button className={styles.enter}>Enter</button></Link>
+            <div className={styles.featureContainer}>
+                <Carousel>
+                    <Carousel.Item>
+                        <img className={styles.carouselPic} src="/edit.png" alt="kodensnip edit" />
+                        <Carousel.Caption>
+                            <p className={styles.description}>Create code snippets for you to copy</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className={styles.carouselPic} src="/dash.png" alt="kodensnip dashboard" />
+                    </Carousel.Item>
+                </Carousel>
+                <Link href="/enter"><button className={styles.enter}>Enter</button></Link>
+            </div>
     </div>
 
 
