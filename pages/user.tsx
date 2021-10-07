@@ -142,6 +142,7 @@ export default function Dashboard(props: object) {
                     <option value="password">update Password</option>
                 </select>
                 <button type="submit" onClick={update}>Update</button>
+                <button onClick={event => {signOut(auth); router.replace("/enter")}}>Sign Out</button>
             </div>
         </div>
         </>

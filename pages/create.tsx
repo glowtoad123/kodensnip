@@ -9,6 +9,7 @@ import Editor from "@monaco-editor/react";
 import Languages from '../components/languages';
 import dynamic from 'next/dynamic';
 import Siteinfo from '../components/siteinfo'
+import localforage from 'localforage';
 
 export const getStaticProps:GetStaticProps = async (ctx) => {
 
@@ -81,25 +82,32 @@ export default function Create(props: object) {
             if(user){
                 setSnippet(current => ({...current, user: user.uid}))
                 pic = user.photoURL
+                await localforage.getItem("currentSnippet").then((value: snip) => {
+                    if(user.uid === value.user){
+                        setSnippet(value)
+                    }
+                }).catch((error: any) => console.log(error))
             } else {
                 router.replace("/enter")
             }
         })
     }, [])
 
-    function settingTitle(event: any){
+    async function settingTitle(event: any){
         setSnippet(current => ({...current, title: event.target.value}))
-
+        await localforage.setItem("currentSnippet", snippet)
     }
 
-    function settingCode(value: string, event: any){
+    async function settingCode(value: string, event: any){
         setSnippet(current => ({...current, code: value}))
         console.log("snippet", snippet)
+        await localforage.setItem("currentSnippet", snippet)
     }
 
-    function settingLanguage(event: any){
+    async function settingLanguage(event: any){
         setSnippet(current => ({...current, language: event.target.value}))
         console.log("language", event.target.value)
+        await localforage.setItem("currentSnippet", snippet)
     }
 
     async function saveSnippet(){
@@ -116,6 +124,12 @@ export default function Create(props: object) {
         let data = await res.json()
         if(data.success){
             router.replace("/dashboard")
+            localforage.setItem("currentSnippet", {
+                title: "",
+                code: "",
+                language: "javascript",
+                user: "string"
+            }).catch(error => console.log(error))
         }
     }
 
